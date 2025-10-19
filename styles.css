@@ -251,6 +251,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .floating-icons i {
@@ -1168,6 +1169,11 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
     }
     
+    .hero-visual {
+        order: -1;
+        margin-bottom: var(--spacing-xl);
+    }
+    
     .floating-icons {
         width: 300px;
         height: 300px;
@@ -1208,14 +1214,37 @@ h1, h2, h3, h4, h5, h6 {
     .hero {
         padding: var(--spacing-3xl) 0;
         min-height: 90vh;
+        overflow: visible;
+    }
+    
+    .hero .container {
+        gap: var(--spacing-2xl);
+    }
+    
+    .hero-visual {
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .floating-icons {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+    }
+    
+    .floating-icons i {
+        font-size: 2.5rem;
+        position: absolute;
+        z-index: 1;
     }
     
     .hero-title {
         font-size: 2.5rem;
+        margin-bottom: var(--spacing-lg);
     }
     
     .hero-subtitle {
         font-size: 1.125rem;
+        margin-bottom: var(--spacing-xl);
     }
     
     .hero-buttons {
@@ -1278,12 +1307,19 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0 var(--spacing-sm);
     }
     
+    .hero {
+        padding: var(--spacing-2xl) 0;
+        min-height: 85vh;
+    }
+    
     .hero-title {
         font-size: 2rem;
+        margin-bottom: var(--spacing-md);
     }
     
     .hero-subtitle {
         font-size: 1rem;
+        margin-bottom: var(--spacing-lg);
     }
     
     .btn {
@@ -1297,12 +1333,13 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .floating-icons {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto var(--spacing-md);
     }
     
     .floating-icons i {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
     .initiative-card,

@@ -150,17 +150,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
+// Parallax effect for hero section (disabled on mobile to prevent overlap issues)
+function handleParallax() {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
     const floatingIcons = document.querySelector('.floating-icons');
     
-    if (hero && floatingIcons) {
+    // Only apply parallax on desktop screens (768px and above)
+    if (hero && floatingIcons && window.innerWidth >= 768) {
         const rate = scrolled * -0.5;
         floatingIcons.style.transform = `translateY(${rate}px)`;
+    } else if (floatingIcons) {
+        // Reset transform on mobile
+        floatingIcons.style.transform = 'translateY(0px)';
     }
-});
+}
+
+window.addEventListener('scroll', handleParallax);
+window.addEventListener('resize', handleParallax);
 
 // Add loading animation
 window.addEventListener('load', () => {
