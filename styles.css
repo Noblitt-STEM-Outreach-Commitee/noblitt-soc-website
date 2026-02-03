@@ -1116,14 +1116,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Responsive Footer */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .footer-content {
         grid-template-columns: 1fr;
         gap: var(--spacing-xl);
     }
-    
+
     .footer-logo-section {
         justify-content: stretch;
+    }
+
+    .partner-logo,
+    .rose-logo {
+        max-width: 150px;
     }
 }
 
