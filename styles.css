@@ -1155,6 +1155,24 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+@media (max-width: 1024px) {
+    .nav-menu {
+        gap: var(--spacing-sm);
+    }
+
+    .nav-link {
+        padding: var(--spacing-sm) var(--spacing-sm);
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-link {
+        background: none !important;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 0 var(--spacing-md);
